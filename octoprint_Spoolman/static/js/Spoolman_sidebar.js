@@ -129,6 +129,10 @@ $(() => {
             updateSelectedSpools();
         };
 
+        const handlePrintSpool = async (toolIdx) => {
+            console.log("Print spool");
+        };
+
         const handleForceRefresh = async () => {
             pluginSpoolmanApi.getSpoolmanSpools.invalidate();
         };
@@ -210,6 +214,7 @@ $(() => {
         self.templateApi = {
             handleOpenSpoolSelector,
             handleDeselectSpool,
+            handlePrintSpool,
             handleTryAgainOnError,
             handleForceRefresh,
         };
